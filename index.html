@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Website</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+
+  <body>
+    <!--main container-->
+    <main>
+      <!--sidebar-->
+      <div id="sidebar">
+        <!--navigation menu-->
+        <div id="navigation-menu">
+          <nav>
+            <ul class="tabs">
+              <li class="tab is-active">
+                <a data-switcher data-tab="1">
+                  <i class="fa-solid fa-user"></i>
+                </a>
+              </li>
+
+              <li class="tab">
+                <a data-switcher data-tab="2">
+                  <i class="fa-solid fa-code"></i>
+                </a>
+              </li>
+
+              <li class="tab">
+                <a data-switcher data-tab="3">
+                  <i class="fa-solid fa-list-check"></i>
+                </a>
+              </li>
+
+              <li class="tab">
+                <a data-switcher data-tab="4">
+                  <i class="fa-solid fa-envelope"></i>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <!--profile info-->
+        <div id="profile">
+          <img src="assets/image2.png" alt="Amol Netke" />
+          <h1>Amol Netke</h1>
+          <h2>Developer | Freelancer</h2>
+
+          <div id="social-links">
+            <a
+              href="https://www.linkedin.com/in/amol-netke-3ba9611a0/"
+              target="_blank"
+            >
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+
+            <a href="https://github.com/amol01netke" target="_blank">
+              <i class="fa-brands fa-github"></i>
+            </a>
+
+            <a href="https://www.hackerrank.com/dashboard" target="_blank">
+              <i class="fa-brands fa-hackerrank"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!--navigation menu pages-->
+      <div class="pages">
+        <!--about-me page-->
+        <div class="page is-active" data-page="1" id="about">
+          <h2 class="page-title">Who is <span>Amol Netke?</span></h2>
+          <hr class="hr" />
+          <p>
+            Hello world! I am an IT student.I love programming. Lorem ipsum
+            dolor, sit amet consectetur adipisicing elit. Nam ipsum tempore sunt
+            dolor libero asperiores odit quae pariatur illo quas provident,
+            voluptatibus nisi, eos illum officia vero magni dicta a. Lorem ipsum
+            dolor sit amet consectetur adipisicing elit. Repudiandae quasi
+            facere excepturi delectus debitis voluptatem expedita quibusdam
+            aliquid? Eligendi, eius similique earum porro nobis distinctio minus
+            dolores voluptates nesciunt aperiam.
+          </p>
+        </div>
+
+        <!--skills page-->
+        <div class="page" data-page="2" id="skills">
+          <h2 class="page-title">My <span>Skills</span></h2>
+          <hr class="hr" />
+
+          <!--grid of skill-card-->
+          <div id="skills-grid">
+            <!--Web Development skill card-->
+            <div class="skill-card">
+              <div class="skill-card-inner">
+                <div class="skill-card-front">
+                  <i class="fa-solid fa-globe"></i>
+                  <h2>
+                    Web <br />
+                    Development
+                  </h2>
+                </div>
+
+                <div class="skill-card-back">
+                  <i class="fa-brands fa-html5"></i>
+                  <i class="fa-brands fa-css3-alt"></i>
+                  <i class="fa-brands fa-js"></i>
+                  <i class="fa-solid fa-database"></i>
+                  <i class="fa-brands fa-wordpress-simple"></i>
+                </div>
+              </div>
+            </div>
+
+            <!--App Development skill card-->
+            <div class="skill-card">
+              <div class="skill-card-inner">
+                <div class="skill-card-front">
+                  <i class="fa-solid fa-mobile-screen-button"></i>
+                  <h2>
+                    Mobile App <br />
+                    Development
+                  </h2>
+                </div>
+
+                <div class="skill-card-back">
+                  <i class="fa-brands fa-android"></i>
+                  <i class="fa-brands fa-java"></i>
+                  <i class="fa-brands fa-swift"></i>
+                </div>
+              </div>
+            </div>
+
+            <!--Other skills card-->
+            <div class="skill-card">
+              <div class="skill-card-inner">
+                <div class="skill-card-front">
+                  <i class="fa-solid fa-magnifying-glass-plus"></i>
+                  <h2>Other <br />Skills</h2>
+                </div>
+
+                <div class="skill-card-back">
+                  <i class="fa-solid fa-c"></i>
+
+                  <i class="fa-brands fa-linux"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--projects page-->
+        <div class="page" data-page="3" id="projects">
+          <h2 class="page-title">My <span>Projects</span></h2>
+          <hr class="hr" />
+
+          <p>Welcome to Projects page</p>
+        </div>
+
+        <!--contact-me page-->
+        <div class="page" data-page="4" id="contact">
+          <h2 class="page-title">Contact <span>Me</span></h2>
+          <hr class="hr" />
+
+          <div id="contact-grid">
+            <form action="#" id="contact-card-1">
+              <input type="text" name="name" placeholder="Name" />
+
+              <input type="email" name="email" placeholder="Email" />
+
+              <textarea
+                name="message"
+                cols="40"
+                rows="10"
+                placeholder="Message"
+              ></textarea>
+
+              <input
+                type="submit"
+                name="submit"
+                value="Send Message"
+                id="submit"
+              />
+            </form>
+
+            <div id="contact-card-2">
+              <div>
+                <a href="tel:+91 961 937 6065">
+                  <i class="fa-solid fa-phone"></i>
+                  <h2>+91 9619376065</h2>
+                </a>
+              </div>
+
+              <div>
+                <a href="mailto:amol01netke@gmail.com">
+                  <i class="fa-solid fa-envelope"></i>
+                  <h2>amol01netke@gmail.com</h2>
+                </a>
+              </div>
+
+              <div>
+                <a href="#">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <h2>Mumbai, India</h2>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script
+      src="https://kit.fontawesome.com/d68ce28128.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

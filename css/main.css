@@ -1,0 +1,262 @@
+:root {
+  --color1: #eee;
+  --color2: #fff;
+  --color3: #000;
+  --color4: #3195ff;
+  --font1: "Poppins", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font1);
+}
+
+/*main container*/
+main {
+  display: flex;
+  height: 100vh;
+}
+
+/*sidebar*/
+#sidebar {
+  width: 30%;
+}
+
+/*navigation menu*/
+#navigation-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#navigation-menu nav .tabs {
+  display: flex;
+  list-style-type: none;
+}
+
+#navigation-menu nav .tabs .tab {
+  padding: 10px 30px;
+  font-size: 1.5em;
+}
+
+#navigation-menu nav .tabs .tab.is-active {
+  background-color: var(--color4);
+  color: var(--color1);
+}
+
+#navigation-menu nav .tabs .tab:hover {
+  background-color: var(--color1);
+  color: var(--color4);
+  cursor: pointer;
+}
+
+#navigation-menu nav .tabs .tab a[data-switcher] {
+  cursor: pointer;
+}
+
+/*profile info*/
+#profile {
+  text-align: center;
+  padding: 20px 20px;
+}
+
+#profile img {
+  max-width: 240px;
+}
+
+#profile h1 {
+  font-size: 3em;
+  color: var(--color3);
+}
+
+#profile h2 {
+  color: var(--color4);
+  font-size: 1.5em;
+}
+
+#social-links a {
+  text-decoration: none;
+}
+
+#social-links a i {
+  color: var(--color3);
+  font-size: 1.8em;
+  margin-top: 5px;
+  padding: 0px 8px;
+}
+
+#social-links2 a i:hover {
+  color: var(--color4);
+  font-size: 1.7em;
+}
+
+/*pages-container*/
+.pages {
+  padding: 20px 40px;
+  width: 70%;
+  background-color: var(--color1);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.pages .page {
+  display: none;
+}
+
+.pages .page.is-active {
+  display: block;
+}
+
+/*page title*/
+.page-title {
+  font-size: 2em;
+  text-align: center;
+}
+
+.page-title span {
+  color: var(--color4);
+}
+
+/*hr*/
+.hr {
+  border: var(--color3) solid 1px;
+}
+
+/*about-me page*/
+#about p {
+  margin-top: 10px;
+  font-size: 1.5em;
+}
+
+/*skills page*/
+#skills-grid {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1em;
+  justify-items: center;
+}
+
+.skill-card {
+  background-color: transparent;
+  width: 300px;
+  height: 150px;
+  perspective: 1000px;
+}
+
+.skill-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 1.5s;
+  transform-style: preserve-3d;
+}
+
+.skill-card:hover .skill-card-inner {
+  transform: rotateY(180deg);
+  cursor: default;
+}
+
+.skill-card-front,
+.skill-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  /*hides the bacface visibility of each card*/
+  backface-visibility: hidden;
+  border-radius: 8px;
+  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px 20px;
+}
+
+.skill-card-front {
+  background-color: var(--color2);
+  color: var(--color3);
+}
+
+.skill-card-front i {
+  color: var(--color4);
+  margin-bottom: 10px;
+  font-size: 2em;
+}
+
+.skill-card-back {
+  background-color: var(--color4);
+  color: var(--color2);
+  padding: 20px 20px;
+  transform: rotateY(180deg);
+}
+
+.skill-card-back i {
+  font-size: 3em;
+  padding: 10px 10px 10px 10px;
+}
+
+/*contact-me section*/
+#contact-grid {
+  display: flex;
+  margin-top: 10px;
+  gap: 1em;
+}
+
+#contact-card-1 {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+#contact-card-1 input,
+textarea {
+  border: none;
+  outline: none;
+  padding: 4px 8px;
+  border-radius: 5px;
+  margin-bottom: 8px;
+}
+
+#contact-card-1 textarea {
+  resize: none;
+}
+
+#submit {
+  margin-top: 10px;
+  font-size: 1em;
+  background-color: var(--color4);
+  color: var(--color2);
+}
+
+#submit:hover {
+  letter-spacing: 2px;
+  box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+#contact-card-2 div {
+  background-color: var(--color2);
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  background-color: var(--color4);
+  color: var(--color2);
+}
+
+#contact-card-2 div:hover {
+  box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+#contact-card-2 div i,
+h2 {
+  font-size: 1.2em;
+}
+
+#contact-card-2 a {
+  text-decoration: none;
+  color: inherit;
+}
